@@ -17,7 +17,7 @@
         <!-- Font Awesome -->
         <script src="https://use.fontawesome.com/078003be9e.js"></script>
     </head>
-    <body>
+    <body class="{{ page.body_class }}">
         <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
@@ -38,8 +38,12 @@
                 </div>
             </div>
         </nav>
-        <div class="content text-center">
-            {{ content }}
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    {{ content }}
+                </div>
+            </div>
         </div>
         <footer class="footer">
             <div class="container">

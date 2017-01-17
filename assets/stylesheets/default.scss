@@ -10,17 +10,8 @@ html {
 }
 
 body {
-    background-color: $navbar-inverse-bg;
-    color: $navbar-inverse-color;
-}
-
-body > .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding: $navbar-height $navbar-padding-horizontal;
+    margin-top: $navbar-height;
+    padding-bottom: $navbar-height + $line-height-computed;
 }
 
 .footer {
@@ -40,4 +31,12 @@ body > .content {
 
 .footer a:hover {
     color: $navbar-inverse-link-hover-color;
+}
+
+.horse {
+    background: url('{{ "/assets/images/animal-brown-horse.jpg" | relative_url }}'), $gray-darker;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: 50% $navbar-height;
+    color: $gray-lighter;
 }
