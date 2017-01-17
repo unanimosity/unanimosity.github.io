@@ -1,0 +1,38 @@
+# site.*
+title: "Unanimosity"
+description: "Applying predictive analytics to Australian horse racing by combining machine learning with swarm psychology"
+#logo: "/assets/images/logo.jpg"
+author:
+    name: "Unanimosity"
+    twitter: "unanimosity"
+social:
+    name: "Unanimosity"
+    links:
+        - "https://github.com/unanimosity"
+        - "https://www.facebook.com/unanimosity"
+        - "https://twitter.com/unanimosity"
+facebook:
+    admins: "100008472259120"
+    publisher: "1386214324784032"
+twitter:
+    username: "unanimosity"
+google_site_verification: "o_fIkIU1jhO4iBhumOSr0BgHF2q_9OdEkWy22xZLE6k"
+
+# Build Settings
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: default
+exclude:
+    - Dockerfile
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - docker-compose.yml
+    - vendor
+gems:
+    - jekyll-seo-tag
+sass:
+    style: :compressed
