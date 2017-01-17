@@ -1,0 +1,19 @@
+art:
+    name: "Art"
+    link_path: "/blog/art/"
+
+business:
+    name: "Business"
+    link_path: "/blog/business/"
+
+life:
+    name: "Life"
+    link_path: "/blog/life/"
+
+technology:
+    name: "Technology"
+    link_path: "/blog/technology/"
+
+unanimosity:
+    name: "Unanimosity"
+    link_path: "/projects/unanimosity/"

@@ -1,0 +1,53 @@
+{% assign columns = include.columns | default:3 %}
+{% assign column_width = 12 | divided_by:columns %}
+{% assign limit = include.limit | default:include.posts.size %}
+{% assign grid_limit = include.grid_limit | default:9 %}
+{% if limit < grid_limit %}
+    {% assign grid_limit = limit %}
+{% endif %}
+
+{% for post in include.posts limit:grid_limit %}
+    {% assign index_mod_columns = forloop.index | modulo:columns %}
+    {% if index_mod_columns == 1 or forloop.first %}
+        <div class="row">
+    {% endif %}
+    <div class="col-md-{{ column_width }}">
+        <div class="thumbnail">
+            <a href="{{ post.url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.title }}" /></a>
+            <div class="caption">
+                <h3>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    {% if post.subtitle %}
+                        <br /><small>{{ post.subtitle }}</small>
+                    {% endif %}
+                </h3>
+                {{ post.excerpt }}
+                <div class="clearfix">
+                    <p class="pull-left text-muted">
+                        <i class="fa fa-calendar fa-fw"></i> {{ post.date | date_to_long_string }}<br />
+                        <i class="fa fa-user fa-fw"></i> {{ site.data.authors[post.author].name | default:site.author.name }}
+                    </p>
+                    <p class="pull-right"><a href="{{ post.url }}" class="btn btn-primary" role="button">Read More</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if index_mod_columns == 0 or forloop.last %}
+        </div>
+    {% endif %}
+{% else %}
+    <p>Nothing to see here... move along!</p>
+{% endfor %}
+
+{% if limit > grid_limit and include.posts.size > grid_limit %}
+    <h3>Older Posts</h3>
+    <ul>
+        {% for post in include.posts offset:grid_limit %}
+            {% assign author = site.data.authors[post.author] %}
+            <li>
+                <a href="{{ post.url }}">{{ post.title }}</a> {% if post.subtitle %}({{ post.subtitle }}){% endif %}<br />
+                <span class="text-muted">Posted on {{ post.date | date_to_long_string }} by {{ site.data.authors[post.author].name | default:site.author.name }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

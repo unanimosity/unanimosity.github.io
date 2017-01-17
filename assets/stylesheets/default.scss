@@ -1,0 +1,61 @@
+---
+---
+
+@import "variables";
+@import "bootstrap";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: $navbar-height;
+    margin-bottom: $footer-height + $line-height-computed;
+}
+
+.jumbotron {
+    color: rgb(255, 255, 255);
+}
+
+.jumbotron small {
+    color: rgb(192, 192, 192);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: $footer-width;
+    height: $footer-height;
+    padding: $footer-padding;
+    background-color: $footer-background-color;
+    color: $footer-color;
+    border-top: $footer-border;
+}
+
+.business {
+    background: url('{{ "/assets/images/pexels-photo-29642.jpg" | relative_url }}'), $gray;
+    background-blend-mode: overlay;
+    background-position: 0% 31%;
+    background-size: cover;
+}
+
+.tools {
+    background: url('{{ "/assets/images/construction-work-carpenter-tools.jpg" | relative_url }}'), $gray-dark;
+    background-blend-mode: overlay;
+    background-position: 0% 37.5%;
+    background-size: cover;
+}
+
+.underwater {
+    background: url('{{ "/assets/images/pexels-photo-108055.jpeg" | relative_url }}');
+    background-position: 0% 37%;
+    background-size: cover;
+}
+
+.writing {
+    background: url('{{ "/assets/images/pexels-photo-24193.jpg" | relative_url }}'), $gray-dark;
+    background-blend-mode: overlay;
+    background-position: 0% 51%;
+    background-size: cover;
+}

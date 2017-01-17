@@ -1,0 +1,35 @@
+blogging:
+    name: "Blogging"
+    link_path: "/blog/blogging/"
+
+learning:
+    name: "Learning"
+    link_path: "/blog/learning/"
+
+motivation:
+    name: "Motivation"
+    link_path: "/blog/motivation/"
+
+thinking:
+    name: "Critical Thinking"
+    link_path: "/blog/thinking/"
+
+creative-writing:
+    name: "Creative Writing"
+    link_path: "/projects/creative-writing/"
+
+data-science:
+    name: "Data Science"
+    link_path: "/projects/data-science/"
+
+digital-art:
+    name: "Digital Art"
+    link_path: "/projects/digital-art/"
+
+software-development:
+    name: "Software Development"
+    link_path: "/projects/software-development/"
+
+web-design:
+    name: "Web Design"
+    link_path: "/projects/web-design/"

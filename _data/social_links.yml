@@ -1,0 +1,11 @@
+- text: "GitHub"
+  icon: "github"
+  url: "https://github.com/justjasongreen"
+
+- text: "Facebook"
+  icon: "facebook-official"
+  url: "https://www.facebook.com/justjasongreen"
+
+- text: "Twitter"
+  icon: "twitter"
+  url: "https://twitter.com/JustJasonGreen"

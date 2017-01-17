@@ -1,0 +1,16 @@
+<ul class="{{ include.class | default: 'nav navbar-nav' }}">
+    {% for item in include.items %}
+        {% if item.is_header %}
+            <li class="dropdown-header">{{ item.text }}</li>
+        {% elsif item.is_separator %}
+            <li role="separator" class="divider"></li>
+        {% elsif item.children.size > 0 %}
+            <li class="dropdown{% if page.url == item.link_path or page.url contains item.active_path %} active{% endif %}">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ item.text }}</span></a>
+                {% include nav_items.html items=item.children class='dropdown-menu' %}
+            </li>
+        {% else %}
+            <li class="{% if page.url == item.link_path or page.url contains item.active_path %}active{% endif %}"><a href="{{ item.link_path | relative_url }}">{{ item.text }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
