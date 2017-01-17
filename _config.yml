@@ -1,20 +1,21 @@
 # site.*
-title: "Just Jason Green"
-description: "Web designer, software developer, data scientist, digital artist and creative writer from Melbourne, Australia"
-logo: "/assets/images/JustJasonGreen.jpg"
+title: "Unanimosity"
+description: "Applying predictive analytics to Australian horse racing by combining machine learning with swarm psychology"
+#logo: "/assets/images/logo.jpg"
 author:
-    name: "Jason Green"
-    twitter: "JustJasonGreen"
+    name: "Unanimosity"
+    twitter: "unanimosity"
 social:
-    name: "Jason Green"
+    name: "Unanimosity"
     links:
-        - "https://github.com/justjasongreen"
-        - "https://www.facebook.com/justjasongreen"
-        - "https://twitter.com/JustJasonGreen"
+        - "https://github.com/unanimosity"
+        - "https://www.facebook.com/unanimosity"
+        - "https://twitter.com/unanimosity"
 facebook:
     admins: "100008472259120"
+    publisher: "1386214324784032"
 twitter:
-    username: "JustJasonGreen"
+    username: "unanimosity"
 google_site_verification: "o_fIkIU1jhO4iBhumOSr0BgHF2q_9OdEkWy22xZLE6k"
 
 # Build Settings
@@ -24,40 +25,6 @@ defaults:
             path: ""
         values:
             layout: default
-            jumbotron_class: "underwater"
-            title_separator: " @ "
-    -
-        scope:
-            path: ""
-            type: "posts"
-        values:
-            layout: post
-            author: "jason"
-            comments: true
-    -
-        scope:
-            path: "blog"
-        values:
-            jumbotron_class: "writing"
-            title: "Latest Blog Posts"
-    -
-        scope:
-            path: "blog"
-            type: "posts"
-        values:
-            image: "/assets/images/pexels-photo-24193.jpg"
-    -
-        scope:
-            path: "projects"
-        values:
-            jumbotron_class: "tools"
-            title: "Latest Project Updates"
-    -
-        scope:
-            path: "projects"
-            type: "posts"
-        values:
-            image: "/assets/images/construction-work-carpenter-tools.jpg"
 exclude:
     - Dockerfile
     - Gemfile
@@ -66,8 +33,6 @@ exclude:
     - docker-compose.yml
     - vendor
 gems:
-    - jekyll-feed
     - jekyll-seo-tag
-    - jekyll-sitemap
 sass:
     style: :compressed
