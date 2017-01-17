@@ -3,8 +3,9 @@ title: "Unanimosity"
 description: "Applying predictive analytics to Australian horse racing by combining machine learning with swarm psychology"
 #logo: "/assets/images/logo.jpg"
 author:
-    name: "Unanimosity"
-    twitter: "unanimosity"
+    name: "Jason Green"
+    twitter: "JustJasonGreen"
+    url: "https://justjasongreen.github.io/"
 social:
     name: "Unanimosity"
     links:

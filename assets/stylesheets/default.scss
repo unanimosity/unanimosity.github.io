@@ -3,3 +3,41 @@
 
 @import "variables";
 @import "bootstrap";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: $navbar-inverse-bg;
+    color: $navbar-inverse-color;
+}
+
+body > .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: $navbar-height $navbar-padding-horizontal;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $navbar-height;
+    padding: $navbar-padding-vertical $navbar-padding-horizontal;
+    background-color: $navbar-inverse-bg;
+    color: $navbar-inverse-color;
+    border-top: $navbar-inverse-border 1px solid;
+}
+
+.footer a {
+    color: $navbar-inverse-link-color;
+}
+
+.footer a:hover {
+    color: $navbar-inverse-link-hover-color;
+}
